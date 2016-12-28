@@ -79,13 +79,19 @@ $(function(){
 
 	var columndefs = [
 			{ title: "id" },
-            { title: "Name", editable: true },
+            { title: "Name", editable: true, type: 'string' },
             { title: "Position" },
             { title: "Office" },
             { title: "Extn." },
             { title: "Start date" },
             { title: "Salary" }
         ];
+	
+		var options = {
+		title: "Título de ejemplo",
+		doOnClose: function(){ console.log("el modal se cerró correctamente")},
+		columns: columndefs
+	};
 
 	 $('#example').DataTable( {
         data: dataSet,
@@ -95,11 +101,7 @@ $(function(){
 	//-----------------------------------------------------------------------------------------------------------------------
 
 
-	var options = {
-		title: "Título de ejemplo",
-		doOnClose: function(){ console.log("el modal se cerró correctamente")},
-		columndefs: columndefs
-	};
+
 
 
 
